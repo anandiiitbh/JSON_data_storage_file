@@ -1,4 +1,4 @@
-# JSON_data_storage_file
+# JSON(Key-Value)_data_storage_system_(API)
 
 >NodeJs(ExpressJs) API to storer Key-value pair that Supports the Basic CRD(Create, Read, Delete) Operations, Data is stored on local storage on User Define Path;
 
@@ -55,4 +55,25 @@ POST->  http://localhost:3000/api/storage/remove             //localhost(your_ho
     "id" : 1,                       //UserID (required)
     "key":"Key1"                    //Key of the data to be deleted (Required)
 }
+```
+
+
+- Implemented Non Functional Requirement 
+
+> The Size of File Storing data will never exceed `1GB`
+```Javascript
+//File Size Check Befor Data Storing 
+function fileSize(fileName){
+    var stats = fs.statSync(fileName)
+    var fileSizeInBytes = stats.size;
+    var fileSizeInMegabytes = fileSizeInBytes / (1024*1024);
+    return  fileSizeInMegabytes<1024?true:false
+}
+```
+
+> More than one client process cannot be allowed to use same file to write
+```Javascript
+//This is achieved by using synchronize methods to write and read data of nodeJs (File System)
+fs.writeFileSync(dirPath+'user.json',JSON.stringify(users, null, 2));
+fs.readFileSync(dirPath+'user.json')
 ```
