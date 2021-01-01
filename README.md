@@ -2,6 +2,15 @@
 
 >NodeJs(ExpressJs) API to storer Key-value pair that Supports the Basic CRD(Create, Read, Delete) Operations, Data is stored on local storage on User Define Path;
 
+>Requirements: `node` recents and `npm`
+
+>Deploy:
+>Download and Extract this repo to your platform and execute this inside the directory
+```Bash
+npm install
+```
+
+
 - Supports Following Functional Requirements:
 
 > User Registration 
