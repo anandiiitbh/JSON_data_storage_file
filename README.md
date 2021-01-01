@@ -1,7 +1,8 @@
 # JSON(Key-Value)_data_storage_system_(API)
 
 >NodeJs(ExpressJs) API to storer Key-value pair that Supports the Basic CRD(Create, Read, Delete) Operations, Data is stored on local storage on User Define Path;
-
+>Problem Statement
+![ProblemStatement](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/Problem%20Statement.jpeg)
 >Requirements: `node` recents and `npm`
 
 >Deploy:
@@ -86,3 +87,21 @@ function fileSize(fileName){
 fs.writeFileSync(dirPath+'user.json',JSON.stringify(users, null, 2));
 fs.readFileSync(dirPath+'user.json')
 ```
+
+- SnapShots while Testing
+
+>Used `postman` And `Chrome Browser` for testing:
+
+>User Registration
+![User Registration](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/1st.png)
+
+>Storing Key-Value Pair
+![API call for key-value](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/2nd.png)
+
+>Reading Data From File
+![Reading Data](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/3rd.png)
+
+>Deleting Data From File
+![Deleting Data](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/4th.png)
+
+>Thank You
