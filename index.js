@@ -13,7 +13,7 @@ app.post('/api/register', (req, res) => {
     var user = users.find(c => c.name ===req.body.name);
     if(!user) {
         if (fs.existsSync(req.body.path)) {
-            let t_data = {"id": users.length+1 , "name" : req.body.name , "file" : req.body.path};
+            let t_data = {"id": users.length+1 , "name" : req.body.name , "file" : req.body.path+"User"+(users.length+1)+".json"};
             users.push(t_data);
             fs.writeFileSync(dirPath+'user.json',JSON.stringify(users, null, 2));
             fs.appendFile(t_data.file, '[]', function (err) {
