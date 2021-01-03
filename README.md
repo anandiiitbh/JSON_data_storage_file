@@ -7,6 +7,8 @@
 
 >Requirements: `node` recents and `npm`
 
+>Used `postman` And `Chrome Browser` for testing
+
 >Deploy:
 >Download and Extract this repo to your platform and execute this inside the directory
 ```Bash
@@ -28,6 +30,8 @@ POST->  http://localhost:3000/api/register             //localhost(your_host)...
 }
 ```
 
+![User Registration](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/1st.png)
+
 > Create And Store New Key-Value pair 
 ```Javascript
 POST->  http://localhost:3000/api/storage/create       //localhost(your_host).... default_port = `3000` (else defined in your `process.env.PORT`
@@ -44,6 +48,8 @@ POST->  http://localhost:3000/api/storage/create       //localhost(your_host)...
 }
 ```
 
+![API call for key-value](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/2nd.png)
+
 > Read Operation API call
 ```Javascript
 POST->  http://localhost:3000/api/storage/read             //localhost(your_host).... default_port = `3000` (else defined in your `process.env.PORT`
@@ -56,6 +62,7 @@ POST->  http://localhost:3000/api/storage/read             //localhost(your_host
 }
 ```
 
+![Reading Data](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/3rd.png)
 
 > Delete Operation API call
 ```Javascript
@@ -68,6 +75,8 @@ POST->  http://localhost:3000/api/storage/remove             //localhost(your_ho
     "key":"Key1"                    //Key of the data to be deleted (Required)
 }
 ```
+
+![Deleting Data](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/4th.png)
 
 
 - Implemented Non Functional Requirement 
@@ -89,21 +98,5 @@ function fileSize(fileName){
 fs.writeFileSync(dirPath+'user.json',JSON.stringify(users, null, 2));
 fs.readFileSync(dirPath+'user.json')
 ```
-
-- SnapShots while Testing
-
->Used `postman` And `Chrome Browser` for testing:
-
->User Registration
-![User Registration](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/1st.png)
-
->Storing Key-Value Pair
-![API call for key-value](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/2nd.png)
-
->Reading Data From File
-![Reading Data](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/3rd.png)
-
->Deleting Data From File
-![Deleting Data](https://github.com/anandiiitbh/JSON_data_storage_file/blob/main/IMG/4th.png)
 
 >Thank You... [Visit Again For Updates :) ]
